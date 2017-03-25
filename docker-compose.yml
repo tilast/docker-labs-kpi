@@ -1,0 +1,11 @@
+node-app:
+  image: lab34-node-app:latest
+  links:
+    - python-app
+  ports:
+    - "5000:8080"
+
+python-app:
+  image: lab34-python-app:latest
+  ports:
+    - "8080:5000"
